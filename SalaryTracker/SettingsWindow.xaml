@@ -1,0 +1,67 @@
+﻿<Window x:Class="SalaryTracker.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="工资设置" Height="280" Width="350"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="White">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="设置你的工资信息开始使用" 
+                   FontSize="16" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Foreground="Black"/>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="月工资（元）：" 
+                       VerticalAlignment="Center" Foreground="Black"/>
+            <TextBox x:Name="txtMonthlySalary" Grid.Column="1" 
+                     Height="25" VerticalAlignment="Center" Padding="3,3"
+                     Text="5000"/>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="上班时间：" 
+                       VerticalAlignment="Center" Foreground="Black"/>
+            <TextBox x:Name="txtWorkStart" Grid.Column="1" 
+                     Height="25" VerticalAlignment="Center" Padding="3,3"
+                     Text="09:00"/>
+        </Grid>
+
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="下班时间：" 
+                       VerticalAlignment="Center" Foreground="Black"/>
+            <TextBox x:Name="txtWorkEnd" Grid.Column="1" 
+                     Height="25" VerticalAlignment="Center" Padding="3,3"
+                     Text="18:00"/>
+        </Grid>
+
+        <Button x:Name="btnStart" Grid.Row="8" 
+                Content="开始赚钱" Height="35"
+                Background="#4CAF50" Foreground="White"
+                FontSize="14" FontWeight="Bold"
+                Click="BtnStart_Click"/>
+    </Grid>
+</Window>

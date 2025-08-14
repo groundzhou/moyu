@@ -1,0 +1,118 @@
+﻿<Window x:Class="SalaryTracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="" Height="190" Width="280"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="White"
+        ResizeMode="NoResize"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Loaded="Window_Loaded">
+
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem x:Name="menuResetSettings" Header="重新设置" Click="MenuResetSettings_Click"/>
+            <MenuItem x:Name="menuTopmost" Header="置顶" Click="MenuTopmost_Click"/>
+            <Separator/>
+            <MenuItem Header="退出" Click="MenuExit_Click"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+
+    <Border BorderBrush="Gray" BorderThickness="1">
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="18*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- 当前时间 -->
+            <TextBlock x:Name="txtCurrentTime" Grid.Row="0" 
+                       Text="2025/08/13 16:00:32"
+                       FontSize="12" Foreground="Black"
+                       HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="70,0,0,0"/>
+
+            <!-- 工作状态 -->
+            <TextBlock x:Name="txtWorkStatus" Grid.Row="2" 
+                       Text="正在上班中"
+                       FontSize="14" FontWeight="Bold"
+                       HorizontalAlignment="Left"
+                       Foreground="Green" Grid.ColumnSpan="2" Margin="94,0,0,0"/>
+
+            <!-- 今日收入 -->
+            <TextBlock x:Name="txtTodayIncome" Grid.Row="4" 
+                       Text="今日已赚取 ￥399.30"
+                       FontSize="14" FontWeight="Bold"
+                       HorizontalAlignment="Left" Foreground="Black" Grid.ColumnSpan="2" Margin="61,0,0,0"/>
+
+            <!-- 进度条 -->
+            <StackPanel Grid.Row="6" Orientation="Vertical" Grid.ColumnSpan="2">
+                <TextBlock Text="今日工作进度" FontSize="10" 
+                           HorizontalAlignment="Center" Foreground="Gray"/>
+                <ProgressBar x:Name="progressBar" Height="8" 
+                             Margin="0,3,0,0" Value="50"/>
+            </StackPanel>
+
+            <!-- 统计信息 -->
+            <Grid Grid.Row="8" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- 今日工作时长和时薪 -->
+                <StackPanel Grid.Row="0" Grid.Column="0" 
+                            HorizontalAlignment="Center">
+                    <TextBlock x:Name="txtWorkHours" Text="3.5 小时" 
+                               FontSize="12" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Foreground="Black"/>
+                    <TextBlock Text="今日工作时长" FontSize="9" 
+                               HorizontalAlignment="Center" Foreground="Gray"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="0" Grid.Column="1" 
+                            HorizontalAlignment="Center">
+                    <TextBlock x:Name="txtHourlyRate" Text="￥34" 
+                               FontSize="12" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Foreground="Black"/>
+                    <TextBlock Text="时薪" FontSize="9" 
+                               HorizontalAlignment="Center" Foreground="Gray"/>
+                </StackPanel>
+
+                <!-- 本月工作天数和收入 -->
+                <StackPanel Grid.Row="2" Grid.Column="0" 
+                            HorizontalAlignment="Center">
+                    <TextBlock x:Name="txtWorkDays" Text="12/21" 
+                               FontSize="12" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Foreground="Black"/>
+                    <TextBlock Text="本月工作天数" FontSize="9" 
+                               HorizontalAlignment="Center" Foreground="Gray"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Grid.Column="1" 
+                            HorizontalAlignment="Center">
+                    <TextBlock x:Name="txtMonthlyIncome" Text="￥3999.91" 
+                               FontSize="12" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Foreground="Black"/>
+                    <TextBlock Text="本月收入" FontSize="9" 
+                               HorizontalAlignment="Center" Foreground="Gray"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

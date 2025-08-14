@@ -137,3 +137,176 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+
+##### VS 文件忽略
+
+## 忽略 Visual Studio 临时文件、构建结果等 ##
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.ncrunchsolution
+*.ncrunchproject
+
+# 用户特定文件
+*.csproj.user
+*.vbproj.user
+
+# 构建结果
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 2015/2017 缓存/选项目录
+.vs/
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# MSTest 测试结果
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# 构建结果
+*.cache
+*.ilk
+*.pdb
+*.exe
+*.dll
+*.pch
+*.exp
+*.lib
+*.xml
+*.manifest
+*.iobj
+*.ipdb
+
+# 打包目录
+packages/
+[Pp]ublish/
+*.publishproj
+
+# NuGet 包目录
+.nuget/
+*.nupkg
+nuget.exe
+
+# 项目引用
+_ReSharper.*
+*.sass-cache
+
+# 文件缓存
+*.cache
+
+# 项目文件
+*.db
+*.db-shm
+*.db-wal
+
+# 其他文件
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# 忽略本地设置文件
+app.config
+appsettings.json
+appsettings.*.json
+
+# 忽略证书文件
+*.pfx
+*.p12
+*.cer
+*.crt
+*.key
+
+# 忽略输出目录
+[Bb]in/
+[Oo]bj/
+
+# 忽略编译生成的程序集
+!**/[Bb]in/Release/
+!**/[Oo]bj/Release/
+
+# 忽略 WPF 临时文件
+*.tmp
+*.temp
+
+# 忽略资源文件缓存
+*.ResourceCache
+
+# 忽略符号文件
+*.pdb
+*.idb
+*.ilk
+
+# 忽略 Visual Studio 备份文件
+*.[Cc]ache
+*.bak
+*.log
+*.msi
+*.msm
+*.msp
+*.sdf
+*.opensdf
+*.sln.ide
+
+# 忽略本地化文件
+*.resx
+*.resources
+
+# 忽略 Git 忽略文件
+!.gitignore
+
+# 忽略项目特定文件
+*.csproj
+*.vbproj
+*.fsproj
+
+# 忽略项目用户选项文件
+*.userprefs
+
+# 忽略 Mac 系统文件
+.DS_Store
+
+# 忽略 Rider 配置文件
+.idea/
+
+# 忽略 VS Code 配置文件
+.vscode/
+
+# 忽略编译输出 (但保留 Release 目录结构)
+[Bb]in/[Dd]ebug/
+[Bb]in/[Rr]elease/net35/
+[Oo]bj/[Dd]ebug/
+[Oo]bj/[Rr]elease/net35/
+
+# 保留必要的构建目录结构 (可选)
+!**/[Bb]in/
+!**/[Oo]bj/
+
+# 但忽略其中的文件
+**/[Bb]in/*
+**/[Oo]bj/*
+!**/[Bb]in/Release/
+!**/[Oo]bj/Release/
+
+# 保留 Release 目录中的文件
+!**/[Bb]in/Release/**
+!**/[Oo]bj/Release/**
+
+# 忽略 WPF 应用程序的本地设置文件
+*.settings
